@@ -5,23 +5,24 @@
   "main": "src/ehi-pillar-blocks.js",
   "scripts": {
     "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
-    "dev": "cross-env BABEL_ENV=default webpack --watch"
+    "start": "rimraf dist/editor.build.css  dist/styles.build.css dist/ehi-pillar-blocks.build.js && cross-env BABEL_ENV=default webpack --watch"
   },
   "author": "eHealth Engineering",
   "license": "ISC",
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ],
     "plugins": [
       "transform-react-jsx"
     ]
   },
+  "browserslist": "> 0.25%, not dead",
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",

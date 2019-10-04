@@ -1,7 +1,7 @@
 const nodeEnv = process.env.NODE_ENV || 'development';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractStyles = new ExtractTextPlugin('./dist/style.build.css');
+const extractStyles = new ExtractTextPlugin('./dist/styles.build.css');
 const extractEditorStyles = new ExtractTextPlugin('./dist/editor.build.css');
 
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
                 },
             },
             {
-                test: /style\.css$/,
+                test: /styles\.css$/,
                 use: extractStyles.extract({
                     fallback: 'style-loader',
                     use: [{
@@ -35,7 +35,7 @@ module.exports = {
             },
             {
                 test: /editor\.css$/,
-                use: extractStyles.extract({
+                use: extractEditorStyles.extract({
                     fallback: 'style-loader',
                     use: [{
                         loader: 'css-loader',
