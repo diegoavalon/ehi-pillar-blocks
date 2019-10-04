@@ -1,13 +1,13 @@
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { TextControl, ToggleControl, SelectControl } = wp.components;
-const { RichText, InspectorControls } = wp.editor;
+const { InspectorControls, InnerBlocks } = wp.editor;
 
 const validAlignments = ["full"];
 
-registerBlockType("ehi-pillar-blocks/hero-split", {
-    title: __("Hero Split"),
-    icon: "align-right",
+registerBlockType("ehi-pillar-blocks/section-with-header", {
+    title: __("Section with Header"),
+    icon: "editor-insertmore",
     category: "ehi-pillar-blocks",
     attributes: {
         align: {
@@ -23,30 +23,9 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
             default:
                 "Over 4 million customers have found a health plan through our marketplace."
         },
-        ctaType: {
-            type: "string",
-            default: "button"
-        },
-        ctaText: {
-            type: "string",
-            default: "Find Health Plans"
-        },
-        imgSrc: {
-            type: "string",
-            default:
-                "https://ik.imagekit.io/ehealth/ifp-dad__cropped__1__V8A-d_PQm.png"
-        },
         color: {
             type: "string",
             default: "green"
-        },
-        featureContent: {
-            type: "string",
-            default: "equal"
-        },
-        isReverse: {
-            type: "boolean",
-            default: false
         },
         useBottomDivider: {
             type: "boolean",
@@ -73,15 +52,10 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
         const {
             headline,
             subtitle,
-            ctaType,
-            ctaText,
-            imgSrc,
-            color,
-            featureContent,
-            isReverse,
             useBottomDivider,
             bottomDividerColor,
-            blockSpacing
+            blockSpacing,
+            color
         } = attributes;
 
         return [
@@ -97,25 +71,6 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                     onChange={newValue => setAttributes({ subtitle: newValue })}
                 />
                 <SelectControl
-                    label="ctaType"
-                    value={ctaType}
-                    onChange={newValue => setAttributes({ ctaType: newValue })}
-                    options={[
-                        { value: "button", label: "Button" },
-                        { value: "email", label: "Email" }
-                    ]}
-                />
-                <TextControl
-                    label="ctaText"
-                    value={ctaText}
-                    onChange={newValue => setAttributes({ ctaText: newValue })}
-                />
-                <TextControl
-                    label="imgSrc"
-                    value={imgSrc}
-                    onChange={newValue => setAttributes({ imgSrc: newValue })}
-                />
-                <SelectControl
                     label="color"
                     value={color}
                     onChange={newValue => setAttributes({ color: newValue })}
@@ -127,25 +82,6 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                         { value: "green", label: "Green" },
                         { value: "gray", label: "Gray" }
                     ]}
-                />
-                <SelectControl
-                    label="featureContent"
-                    value={featureContent}
-                    onChange={newValue =>
-                        setAttributes({ featureContent: newValue })
-                    }
-                    options={[
-                        { value: "image", label: "Image" },
-                        { value: "content", label: "Content" },
-                        { value: "equal", label: "Equal" }
-                    ]}
-                />
-                <ToggleControl
-                    label="Reverse the layout?"
-                    checked={isReverse}
-                    onChange={newValue =>
-                        setAttributes({ isReverse: newValue })
-                    }
                 />
                 <ToggleControl
                     label="Add a bottom divider?"
@@ -179,50 +115,40 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                     }
                 />
             </InspectorControls>,
-            <hero-split
+            <section-with-header
                 headline={headline}
                 subtitle={subtitle}
-                cta-type={ctaType}
-                cta-text={ctaText}
-                img-src={imgSrc}
                 color={color}
-                feature-content={featureContent}
-                is-reverse={isReverse}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
                 block-spacing={blockSpacing}
-            ></hero-split>
+            >
+                <InnerBlocks />
+            </section-with-header>
         ];
     },
+
     save({ attributes }) {
         const {
             headline,
             subtitle,
-            ctaType,
-            ctaText,
-            imgSrc,
             color,
-            featureContent,
-            isReverse,
             useBottomDivider,
             bottomDividerColor,
             blockSpacing
         } = attributes;
 
         return (
-            <hero-split
+            <section-with-header
                 headline={headline}
                 subtitle={subtitle}
-                cta-type={ctaType}
-                cta-text={ctaText}
-                img-src={imgSrc}
                 color={color}
-                feature-content={featureContent}
-                is-reverse={isReverse}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
                 block-spacing={blockSpacing}
-            ></hero-split>
+            >
+                <InnerBlocks.Content />
+            </section-with-header>
         );
     }
 });

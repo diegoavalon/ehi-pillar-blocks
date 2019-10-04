@@ -27,3 +27,16 @@ function ehi_pillar_blocks_enqueue_assets() {
     wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/collection/styles/main.css' );
     wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/ehi-landing-components.js', array(), 'null', false );
 }
+
+function ehi_pillar_blocks_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'ehi-pillar-blocks',
+				'title' => __( 'eHealth Pillar Blocks', 'ehi-pillar-blocks' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'ehi_pillar_blocks_category', 10, 2);
