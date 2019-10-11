@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Plugin Name: EHI Pillar Blocks 
+ *  Plugin Name: eHealth Pillar Blocks 
  *  Description: Gutenberg blocks for IFP Landing Pages
  *  Text Domain: ehi-pillar-blocks
  *  Version: 0.1.0

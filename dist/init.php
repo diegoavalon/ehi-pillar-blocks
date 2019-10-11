@@ -4,8 +4,8 @@ defined( 'ABSPATH' ) || exit;
 
 add_action( 'enqueue_block_editor_assets', 'ehi_pillar_blocks_editor_assets' );
 function ehi_pillar_blocks_editor_assets() {
-    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/collection/styles/main.css' );
-    wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/ehi-landing-components.js', array(), 'null', false );
+    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/dist/collection/styles/main.css' );
+    wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components/dist/ehi-landing-components.js', array(), 'null', false );
     
     wp_enqueue_style( 
         'ehi-pillar-blocks-editor-styles',
@@ -24,8 +24,8 @@ function ehi_pillar_blocks_editor_assets() {
 
 add_action( 'enqueue_block_assets', 'ehi_pillar_blocks_enqueue_assets' );
 function ehi_pillar_blocks_enqueue_assets() {
-    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/collection/styles/main.css' );
-    wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components@0.0.7/dist/ehi-landing-components.js', array(), 'null', false );
+    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/dist/collection/styles/main.css' );
+    wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components/dist/ehi-landing-components.js', array(), 'null', false );
 }
 
 function ehi_pillar_blocks_category( $categories, $post ) {
