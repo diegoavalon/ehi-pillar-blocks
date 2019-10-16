@@ -34,10 +34,6 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
         bottomDividerColor: {
             type: "string",
             default: "blue"
-        },
-        blockSpacing: {
-            type: "string",
-            default: ""
         }
     },
 
@@ -54,7 +50,7 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
             subtitle,
             useBottomDivider,
             bottomDividerColor,
-            blockSpacing,
+            className,
             color
         } = attributes;
 
@@ -107,13 +103,6 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
                         ]}
                     />
                 )}
-                <TextControl
-                    label="Wrapper CSS classes"
-                    value={blockSpacing}
-                    onChange={newValue =>
-                        setAttributes({ blockSpacing: newValue })
-                    }
-                />
             </InspectorControls>,
             <section-with-header
                 headline={headline}
@@ -121,7 +110,7 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
                 color={color}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
-                block-spacing={blockSpacing}
+                additional-classes={className}
             >
                 <InnerBlocks />
             </section-with-header>
@@ -130,12 +119,12 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
 
     save({ attributes }) {
         const {
+            className,
             headline,
             subtitle,
             color,
             useBottomDivider,
-            bottomDividerColor,
-            blockSpacing
+            bottomDividerColor
         } = attributes;
 
         return (
@@ -145,7 +134,7 @@ registerBlockType("ehi-pillar-blocks/section-with-header", {
                 color={color}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
-                block-spacing={blockSpacing}
+                additional-classes={className}
             >
                 <InnerBlocks.Content />
             </section-with-header>

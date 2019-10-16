@@ -19,7 +19,7 @@ registerBlockType("ehi-pillar-blocks/list-number", {
     },
 
     edit({ attributes, setAttributes }) {
-        const { number, color } = attributes;
+        const { number, color, className } = attributes;
 
         return [
             <InspectorControls>
@@ -47,17 +47,25 @@ registerBlockType("ehi-pillar-blocks/list-number", {
                     ]}
                 />
             </InspectorControls>,
-            <element-list-number color={color} number-text={number}>
+            <element-list-number
+                color={color}
+                number-text={number}
+                additional-classes={className}
+            >
                 <InnerBlocks />
             </element-list-number>
         ];
     },
 
     save({ attributes }) {
-        const { number, color } = attributes;
+        const { number, color, className } = attributes;
 
         return (
-            <element-list-number color={color} number-text={number}>
+            <element-list-number
+                color={color}
+                number-text={number}
+                additional-classes={className}
+            >
                 <InnerBlocks.Content />
             </element-list-number>
         );

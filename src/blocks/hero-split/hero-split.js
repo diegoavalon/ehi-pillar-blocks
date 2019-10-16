@@ -31,6 +31,10 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
             type: "string",
             default: "Find Health Plans"
         },
+        ctaUrl: {
+            type: "string",
+            default: "https://ehealth.com"
+        },
         imgSrc: {
             type: "string",
             default:
@@ -71,10 +75,12 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
 
     edit({ attributes, setAttributes }) {
         const {
+            className,
             headline,
             subtitle,
             ctaType,
             ctaText,
+            ctaUrl,
             imgSrc,
             color,
             featureContent,
@@ -97,7 +103,7 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                     onChange={newValue => setAttributes({ subtitle: newValue })}
                 />
                 <SelectControl
-                    label="ctaType"
+                    label="CTA Type"
                     value={ctaType}
                     onChange={newValue => setAttributes({ ctaType: newValue })}
                     options={[
@@ -106,17 +112,22 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                     ]}
                 />
                 <TextControl
-                    label="ctaText"
+                    label="CTA Text"
                     value={ctaText}
                     onChange={newValue => setAttributes({ ctaText: newValue })}
                 />
                 <TextControl
-                    label="imgSrc"
+                    label="CTA Url"
+                    value={ctaUrl}
+                    onChange={newValue => setAttributes({ ctaUrl: newValue })}
+                />
+                <TextControl
+                    label="Image source url"
                     value={imgSrc}
                     onChange={newValue => setAttributes({ imgSrc: newValue })}
                 />
                 <SelectControl
-                    label="color"
+                    label="Color"
                     value={color}
                     onChange={newValue => setAttributes({ color: newValue })}
                     options={[
@@ -129,7 +140,7 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                     ]}
                 />
                 <SelectControl
-                    label="featureContent"
+                    label="What should be most featured?"
                     value={featureContent}
                     onChange={newValue =>
                         setAttributes({ featureContent: newValue })
@@ -171,35 +182,31 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                         ]}
                     />
                 )}
-                <TextControl
-                    label="Wrapper CSS classes"
-                    value={blockSpacing}
-                    onChange={newValue =>
-                        setAttributes({ blockSpacing: newValue })
-                    }
-                />
             </InspectorControls>,
             <hero-split
                 headline={headline}
                 subtitle={subtitle}
                 cta-type={ctaType}
                 cta-text={ctaText}
+                cta-url={ctaUrl}
                 img-src={imgSrc}
                 color={color}
                 feature-content={featureContent}
                 is-reverse={isReverse}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
-                block-spacing={blockSpacing}
+                additional-classes={className}
             ></hero-split>
         ];
     },
     save({ attributes }) {
         const {
+            className,
             headline,
             subtitle,
             ctaType,
             ctaText,
+            ctaUrl,
             imgSrc,
             color,
             featureContent,
@@ -215,13 +222,14 @@ registerBlockType("ehi-pillar-blocks/hero-split", {
                 subtitle={subtitle}
                 cta-type={ctaType}
                 cta-text={ctaText}
+                cta-url={ctaUrl}
                 img-src={imgSrc}
                 color={color}
                 feature-content={featureContent}
                 is-reverse={isReverse}
                 use-bottom-divider={useBottomDivider}
                 bottom-divider-color={bottomDividerColor}
-                block-spacing={blockSpacing}
+                additional-classes={className}
             ></hero-split>
         );
     }

@@ -23,7 +23,7 @@ registerBlockType("ehi-pillar-blocks/alert", {
     },
 
     edit({ attributes, setAttributes }) {
-        const { title, message, color } = attributes;
+        const { title, message, color, className } = attributes;
 
         return [
             <InspectorControls>
@@ -55,18 +55,20 @@ registerBlockType("ehi-pillar-blocks/alert", {
                 color={color}
                 alert-title={title}
                 alert-message={message}
+                additional-classes={className}
             ></element-alert>
         ];
     },
 
     save({ attributes }) {
-        const { title, message, color } = attributes;
+        const { title, message, color, className } = attributes;
 
         return (
             <element-alert
                 color={color}
                 alert-title={title}
                 alert-message={message}
+                additional-classes={className}
             ></element-alert>
         );
     }
