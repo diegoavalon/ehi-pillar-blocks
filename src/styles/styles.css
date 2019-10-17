@@ -1,0 +1,9 @@
+.wp-block-image {
+    margin: 0;
+}
+.wp-block-image figure {
+    margin-bottom: 0;
+}
+.wp-bootstrap-blocks-container.mb-2 {
+    margin-bottom: 0 !important;
+}
