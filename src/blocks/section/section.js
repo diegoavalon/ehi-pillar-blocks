@@ -8,6 +8,12 @@ registerBlockType('ehi-pillar-blocks/section', {
     title: __('Section'),
     icon: 'editor-insertmore',
     category: 'ehi-pillar-blocks',
+    attributes: {
+        align: {
+            type: 'string',
+            default: 'full'
+        }
+    },
 
     getEditWrapperProps(attributes) {
         const { align } = attributes;
