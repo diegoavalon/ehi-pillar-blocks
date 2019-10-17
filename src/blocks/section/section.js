@@ -37,7 +37,7 @@ registerBlockType('ehi-pillar-blocks/section', {
     },
 
     save({ attributes }) {
-        const { className } = attributes;
+        const { color, className } = attributes;
 
         return (
             <section-simple color={color} additional-classes={className}>
