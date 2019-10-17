@@ -12,6 +12,10 @@ registerBlockType('ehi-pillar-blocks/section', {
         align: {
             type: 'string',
             default: 'full'
+        },
+        color: {
+            type: 'string',
+            default: 'green'
         }
     },
 
@@ -23,12 +27,12 @@ registerBlockType('ehi-pillar-blocks/section', {
     },
 
     edit({ attributes }) {
-        const { className } = attributes;
+        const { color, className } = attributes;
 
         return (
-            <section className={className}>
+            <section-simple color={color} additional-classes={className}>
                 <InnerBlocks />
-            </section>
+            </section-simple>
         );
     },
 
@@ -36,9 +40,9 @@ registerBlockType('ehi-pillar-blocks/section', {
         const { className } = attributes;
 
         return (
-            <section className={className}>
+            <section-simple color={color} additional-classes={className}>
                 <InnerBlocks.Content />
-            </section>
+            </section-simple>
         );
     }
 });
