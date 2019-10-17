@@ -6,5 +6,6 @@ import "./blocks/hero-split/hero-split";
 import "./blocks/section-with-header/section-with-header";
 import "./blocks/section/section";
 
+import "./blocks/button/button";
 import "./blocks/alert/alert";
 import "./blocks/list-number/list-number";
