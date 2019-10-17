@@ -27,7 +27,7 @@ registerBlockType('ehi-pillar-blocks/section', {
         }
     },
 
-    edit({ attributes }) {
+    edit({ attributes, setAttributes }) {
         const { color, className } = attributes;
 
         return [
