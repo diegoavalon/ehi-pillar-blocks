@@ -7,3 +7,252 @@
 .wp-bootstrap-blocks-container.mb-2 {
     margin-bottom: 0 !important;
 }
+
+/* Block Colors */
+.has-green-active-color {
+    color: #9bedd1;
+}
+
+.has-green-active-background-color {
+    background-color: #9bedd1;
+}
+
+.has-green-hover-color {
+    color: #3fdca6;
+}
+
+.has-green-hover-background-color {
+    background-color: #3fdca6;
+}
+
+.has-green-text-color {
+    color: #075f41;
+}
+
+.has-green-text-background-color {
+    background-color: #075f41;
+}
+
+.has-green-color {
+    color: #30c592;
+}
+
+.has-green-background-color {
+    background-color: #30c592;
+}
+
+.has-green-light-color {
+    color: #9bedd1;
+}
+
+.has-green-light-background-color {
+    background-color: #9bedd1;
+}
+
+.has-green-lightest-color {
+    color: #eaf9f4;
+}
+
+.has-green-lightest-background-color {
+    background-color: #eaf9f4;
+}
+
+.has-orange-active-color {
+    color: #ffd092;
+}
+
+.has-orange-active-background-color {
+    background-color: #ffd092;
+}
+
+.has-orange-text-color {
+    color: #794d13;
+}
+
+.has-orange-text-background-color {
+    background-color: #794d13;
+}
+
+.has-orange-color {
+    color: #ffc170;
+}
+
+.has-orange-background-color {
+    background-color: #ffc170;
+}
+
+.has-orange-lightest-color {
+    color: #fdf1d7;
+}
+
+.has-orange-lightest-background-color {
+    background-color: #fdf1d7;
+}
+
+.has-blue-active-color {
+    color: #9feef9;
+}
+
+.has-blue-active-background-color {
+    background-color: #9feef9;
+}
+
+.has-blue-hover-color {
+    color: #07d7f3;
+}
+
+.has-blue-hover-background-color {
+    background-color: #07d7f3;
+}
+
+.has-blue-text-color {
+    color: #0a5059;
+}
+
+.has-blue-text-background-color {
+    background-color: #0a5059;
+}
+
+.has-blue-color {
+    color: #01c4df;
+}
+
+.has-blue-background-color {
+    background-color: #01c4df;
+}
+
+.has-blue-light-color {
+    color: #9feef9;
+}
+
+.has-blue-light-background-color {
+    background-color: #9feef9;
+}
+
+.has-blue-lightest-color {
+    color: #d2faff;
+}
+
+.has-blue-lightest-background-color {
+    background-color: #d2faff;
+}
+
+.has-red-active-color {
+    color: #66130e;
+}
+
+.has-red-active-background-color {
+    background-color: #66130e;
+}
+
+.has-red-hover-color {
+    color: #af2318;
+}
+
+.has-red-hover-background-color {
+    background-color: #af2318;
+}
+
+.has-red-text-color {
+    color: #66130e;
+}
+
+.has-red-text-background-color {
+    background-color: #66130e;
+}
+
+.has-red-dark-color {
+    color: #af2318;
+}
+
+.has-red-dark-background-color {
+    background-color: #af2318;
+}
+
+.has-red-color {
+    color: #e4463c;
+}
+
+.has-red-background-color {
+    background-color: #e4463c;
+}
+
+.has-red-light-color {
+    color: #fa847d;
+}
+
+.has-red-light-background-color {
+    background-color: #fa847d;
+}
+
+.has-red-lightest-color {
+    color: #ffdddb;
+}
+
+.has-red-lightest-background-color {
+    background-color: #ffdddb;
+}
+
+.has-gray-active-color {
+    color: #000000;
+}
+
+.has-gray-active-background-color {
+    background-color: #000000;
+}
+
+.has-gray-hover-color {
+    color: #333333;
+}
+
+.has-gray-hover-background-color {
+    background-color: #333333;
+}
+
+.has-gray-dark-color {
+    color: #333333;
+}
+
+.has-gray-dark-background-color {
+    background-color: #333333;
+}
+
+.has-gray-color {
+    color: #666666;
+}
+
+.has-gray-background-color {
+    background-color: #666666;
+}
+
+.has-gray-lighter-color {
+    color: #bababa;
+}
+
+.has-gray-lighter-background-color {
+    background-color: #bababa;
+}
+
+.has-gray-lightest-color {
+    color: #f4f4f4;
+}
+
+.has-gray-lightest-background-color {
+    background-color: #f4f4f4;
+}
+
+.has-black-color {
+    color: #000000;
+}
+
+.has-black-background-color {
+    background-color: #000000;
+}
+
+.has-white-color {
+    color: #ffffff;
+}
+
+.has-white-background-color {
+    background-color: #ffffff;
+}
