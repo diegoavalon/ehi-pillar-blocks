@@ -5,7 +5,7 @@
 
 /* Width of "wide" blocks */
 .wp-block[data-align='wide'] {
-    max-width: 1080px;
+    max-width: 960px;
 }
 
 /* Width of "full-wide" blocks */

@@ -8,6 +8,20 @@
     margin-bottom: 0 !important;
 }
 
+.wp-block-embed.alignwide {
+    max-width: 960px;
+}
+
+.wp-block-image.alignfull {
+    max-width: 100%;
+}
+
+.wysiwyg table {
+    display: block;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
 /* Block Colors */
 .has-green-active-color {
     color: #9bedd1;
