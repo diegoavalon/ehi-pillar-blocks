@@ -18,8 +18,7 @@ registerBlockType('ehi-pillar-blocks/inline-cta', {
         },
         subtitle: {
             type: 'string',
-            default:
-                'Over 5 million customers have found a health plan through our marketplace.'
+            default: ''
         },
         actionType: {
             type: 'string',
