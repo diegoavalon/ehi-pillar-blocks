@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 
 add_action( 'enqueue_block_editor_assets', 'ehi_pillar_blocks_editor_assets' );
 function ehi_pillar_blocks_editor_assets() {
-    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/www/styles/main.css' );
+    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/www/styles/ehi-pillar/ehi-pillar.min.css' );
     wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components/www/build/ehi-landing-components.js', array(), 'null', false );
     
     wp_enqueue_style( 
@@ -24,7 +24,7 @@ function ehi_pillar_blocks_editor_assets() {
 
 add_action( 'enqueue_block_assets', 'ehi_pillar_blocks_enqueue_assets' );
 function ehi_pillar_blocks_enqueue_assets() {
-    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/www/styles/main.css' );
+    wp_enqueue_style( 'ehi-pillar-components-styles', 'https://unpkg.com/ehi-pillar-components/www/styles/ehi-pillar/ehi-pillar.min.css' );
 	wp_enqueue_script( 'ehi-pillar-components-loader', 'https://unpkg.com/ehi-pillar-components/www/build/ehi-landing-components.js', array(), 'null', false );
 	
 	wp_enqueue_style( 
